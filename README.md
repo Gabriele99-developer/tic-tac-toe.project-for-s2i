@@ -1,6 +1,6 @@
 # Tic-Tac-Toe
 
-#Tic Tac Toe project for Start2impact
+# Tic Tac Toe project for Start2impact
 
 Tic Tac Toe made in Vue.js
 
