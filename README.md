@@ -1,2 +1,16 @@
-# tic-tac-toe.project-for-s2i
-Tic-tac-toe project for Start2impact
+# Tic-Tac-Toe
+
+Tic Tac Toe made in Vue.js
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+```
