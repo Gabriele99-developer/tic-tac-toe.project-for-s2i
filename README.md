@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-To get a local copy up and running follow these simple steps. You can also try a live demo [on Netlify](https://fabio-mancin-tic-tac-vue.netlify.app/)
+To get a local copy up and running follow these simple steps. You can also try a live demo [on Netlify](https://app.netlify.com/sites/eager-heisenberg-207b17/overview)
 
 ### Prerequisites
 
@@ -54,15 +54,3 @@ Project Link: [https://github.com/Gabriele99-developer/tic-tac-toe.project-for-s
 * [start2impact](start2impact.it)
 * [netlify](https://www.netlify.com/)
 
-[contributors-shield]: https://img.shields.io/github/contributors/fabio-mancin/tic-tac-vue.svg?style=for-the-badge
-[contributors-url]: https://github.com/fabio-mancin/tic-tac-vue/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/fabio-mancin/tic-tac-vue.svg?style=for-the-badge
-[forks-url]: https://github.com/fabio-mancin/tic-tac-vue/network/members
-[stars-shield]: https://img.shields.io/github/stars/fabio-mancin/tic-tac-vue.svg?style=for-the-badge
-[stars-url]: https://github.com/fabio-mancin/tic-tac-vue/stargazers
-[issues-shield]: https://img.shields.io/github/issues/fabio-mancin/tic-tac-vue.svg?style=for-the-badge
-[issues-url]: https://github.com/fabio-mancin/tic-tac-vue/issues
-[license-shield]: https://img.shields.io/github/license/fabio-mancin/tic-tac-vue.svg?style=for-the-badge
-[license-url]: https://github.com/fabio-mancin/tic-tac-vue/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/fabio-mancin
