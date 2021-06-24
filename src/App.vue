@@ -1,21 +1,41 @@
 <template>
   <div id="app">
-    <tic-tac-toe />
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
+
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
   * {
-    font-family: 'Roboto Mono', monospace;
-  }
-  body, html {
-    height: 100%;
-    background-color: rgb(10,78,100);
+    margin: 0;
+    padding: 0;
   }
   #app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
   }
+
+  #nav {
+    padding: 30px;
+    height: 3vh;
+  }
+
+  #nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  #nav a.router-link-exact-active {
+    color: #42b983;
+  }
+
 </style>
