@@ -24,7 +24,7 @@ You can play against yourself or against a very dumb AI.
 
 ## Roadmap
 
-See the [open issues](https://github.com/fabio-mancin/tic-tac-vue/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Gabriele99-developer/tic-tac-toe.project-for-s2i) for a list of proposed features (and known issues).
 
 ## Contributing
 
@@ -42,11 +42,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
- gabro180@gmail.com
+gabro180@gmail.com
 
-Project Link: [https://github.com/fabio-mancin/tic-tac-vue](https://github.com/fabio-mancin/tic-tac-vue)
+Project Link: [https://github.com/Gabriele99-developer/tic-tac-toe.project-for-s2i](https://github.com/Gabriele99-developer/tic-tac-toe.project-for-s2i)
 
-Website: [fabiomancin.org](https://fabiomancin.org)
 
 ## Acknowledgements
 
