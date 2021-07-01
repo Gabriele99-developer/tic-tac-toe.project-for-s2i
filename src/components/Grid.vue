@@ -31,11 +31,11 @@ export default {
     data () {
         return {
             // can be O or X
-            activePlayer: 'O',
+            activePlayer: 'X',
             // maintains the status of the game: turn or win or draw
             gameStatus: 'turn',
 
-            gameStatusMessage: `O's turn`,
+            gameStatusMessage: `Il turno di X`,
             // status color is used as background color in the status bar
             // it can hold the name of either of the following CSS classes
             // statusTurn (default) is yellow for a turn
@@ -103,7 +103,7 @@ export default {
             Event.$emit('win', this.activePlayer)
 
                 // sets the game status message
-                this.gameStatusMessage = `${this.activePlayer} Wins !`
+                this.gameStatusMessage = `${this.activePlayer} Vittoria !`
 
                 // fires an event for the Cell to freeze
                 Event.$emit('freeze')
@@ -149,7 +149,7 @@ export default {
             if (this.gameStatus === 'win') {
                 this.gameStatusColor = 'statusWin'
 
-                this.gameStatusMessage = `${this.activePlayer} Wins !`
+                this.gameStatusMessage = `${this.activePlayer} Vittoria !`
 
                 return
             } else if (this.gameStatus === 'draw') {
@@ -160,7 +160,7 @@ export default {
                 return
             }
 
-            this.gameStatusMessage = `${this.activePlayer}'s turn`
+            this.gameStatusMessage = `${this.activePlayer} è il turno`
         }
     }
 }
