@@ -8,9 +8,9 @@
     name: 'cell',
 		data () {
 			return {
-				// enables the player to place a mark
+				// permette al giocatore di piazzare un segno
  				frozen: false,
-				// holds either X or O to be displayed in the td
+				// contiene X o O da visualizzare in td
 				mark: ''
 			}	
 		},
@@ -18,20 +18,23 @@
 		methods: {
 			strike () {
 				if (! this.frozen) {
-					// gets either X or O from the Grid component
+					
+                  // ottiene X o O dal componente Grid
 					this.mark = this.$parent.activePlayer
 
 					this.frozen = true
 					
-					// fires an event to notify the Grid component that a mark is placed
+					
+                 // attiva un evento per notificare al componente Grid che è stato posizionato un segno
 					Event.$emit('strike', this.name)
 				}
       },
       areEqual () {
             var len = arguments.length;
 
-            // loops through each value and compares them with an empty sting and 
-            // for inequality
+
+             // scorre ogni valore e li confronta con una stringa vuota e
+            // per la disuguaglianza
             for (var i = 1; i < len; i++){
                 if (arguments[i] === '' || arguments[i] !== arguments[i-1])
                     return false;

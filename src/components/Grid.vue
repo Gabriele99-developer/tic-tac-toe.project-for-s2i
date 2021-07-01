@@ -30,36 +30,32 @@ export default {
     components: { Cell },
     data () {
         return {
-            // can be O or X
+            
             activePlayer: 'X',
-            // maintains the status of the game: turn or win or draw
+            
             gameStatus: 'turn',
 
             gameStatusMessage: `Il turno di X`,
-            // status color is used as background color in the status bar
-            // it can hold the name of either of the following CSS classes
-            // statusTurn (default) is yellow for a turn
-                // statusWin is green for a win
-                // statusDraw is purple for a draw
+
             gameStatusColor: 'statusTurn',
-            // no. of moves played by both players in a single game (max = 9)
+            // no. di mosse giocate da entrambi i giocatori in una singola partita (max = 9)
             moves: 0,
-            // stores the placement of X and O in cells by their cell number
+            // memorizza il posizionamento di X e O nelle celle in base al loro numero di cella
             cells: {
                 1: '', 2: '', 3: '',
                 4: '', 5: '', 6: '',
                 7: '', 8: '', 9: ''
             },
-            // contains all (8) possible winning conditions
+            
             winConditions: [
-                [1, 2, 3], [4, 5, 6], [7, 8, 9], // rows
-                [1, 4, 7], [2, 5, 8],    [3, 6, 9], // columns
-                [1, 5, 9], [3, 5, 7]             // diagonals
+                [1, 2, 3], [4, 5, 6], [7, 8, 9],
+                [1, 4, 7], [2, 5, 8],    [3, 6, 9], 
+                [1, 5, 9], [3, 5, 7]             
             ],
         }
     },
     computed: {
-        // helper property to get the non-active player
+        // proprietà helper per ottenere il giocatore non attivo
         nonActivePlayer () {
             if (this.activePlayer === 'O') {
                 return 'X'
@@ -75,8 +71,8 @@ export default {
         areEqual () {
                 var len = arguments.length;
 
-                // loops through each value and compares them with an empty sting and 
-                // for inequality
+                // scorre ogni valore e li confronta con una puntura vuota e
+                // per la disuguaglianza
                 for (var i = 1; i < len; i++){
                     if (arguments[i] === '' || arguments[i] !== arguments[i-1])
                         return false;
@@ -85,11 +81,11 @@ export default {
         },
         checkForWin () {
             for (let i = 0; i < this.winConditions.length; i++) {
-                // gets a single condition wc from the whole array
+                // ottiene una singola condizione wc dall'intero array
                 let wc = this.winConditions[i]
                 let cells = this.cells
 
-                // compares 3 cell values based on the cells in the condition
+                // confronta i valori di 3 celle in base alle celle nella condizione
                 if (this.areEqual(cells[wc[0]], cells[wc[1]], cells[wc[2]])) {
                     return true
                 }
@@ -99,27 +95,27 @@ export default {
         },
         
         gameIsWon () {
-            // fires win event for the App component to change the score
+            // incendi vince l'evento per il componente App per modificare il punteggio
             Event.$emit('win', this.activePlayer)
 
-                // sets the game status message
+                // imposta il messaggio di stato del gioco
                 this.gameStatusMessage = `${this.activePlayer} Vittoria !`
 
-                // fires an event for the Cell to freeze
+                // attiva un evento per il congelamento della cella
                 Event.$emit('freeze')
 
-            // sets the status to win
+            // imposta lo stato per vincere
             return 'win'
         },
         changeGameStatus () {
             if (this.checkForWin()) {
                 return this.gameIsWon()
-            // checks if the game is still not won and all cells are filled
+            // controlla se la partita non è ancora vinta e tutte le celle sono piene
             } else if (this.moves === 9) {
-                // sets the status to draw
+                // imposta lo stato per disegnare
                 return 'draw'
             }
-            // sets the status to turn
+            // imposta lo stato su svolta
             return 'turn'
         }
     },
@@ -128,13 +124,13 @@ export default {
             Object.assign(this.$data, this.$options.data())
         }),
         Event.$on('strike', (cellNumber) => {
-            // sets either X or O in the clicked cell of the cells array
+            // imposta X o O nella cella cliccata dell'array di celle
             this.cells[cellNumber] = this.activePlayer
 
-            // increments the number of moves
+            // incrementa il numero di mosse
             this.moves++
 
-            // stores the game status by calling the changeGameStatus method
+            // memorizza lo stato del gioco chiamando il metodo changeGameStatus
             this.gameStatus = this.changeGameStatus()
 
             if(this.gameStatus == 'turn') {
@@ -143,8 +139,8 @@ export default {
         })
     },
     watch: {
-        // watches for change in the value of gameStatus and changes the status 
-        // message and color accordingly
+        // osserva il cambiamento nel valore di gameStatus e cambia lo stato 
+        // messaggio e colore di conseguenza
         gameStatus () {
             if (this.gameStatus === 'win') {
                 this.gameStatusColor = 'statusWin'
