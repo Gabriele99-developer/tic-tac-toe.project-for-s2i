@@ -59,7 +59,7 @@
   height: 90px;
   border: 6px solid white;
   font-size: 3.5em;
-  font-family: 'PT+Sans';
+  font-family: 'PT Sans';
 }
 
 

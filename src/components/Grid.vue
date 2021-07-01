@@ -155,7 +155,7 @@ export default {
             } else if (this.gameStatus === 'draw') {
                 this.gameStatusColor = 'statusDraw'
 
-                this.gameStatusMessage = 'Draw !'
+                this.gameStatusMessage = 'Pareggio!'
 
                 return
             }

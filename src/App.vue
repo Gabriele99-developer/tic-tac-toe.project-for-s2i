@@ -52,9 +52,9 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 body {
-  background-color: #fff;
+   background-image: url("/src/assets/tic-tac-toe.jpg");
   color: #fff;
-  font-family: 'PT+Sans';
+  font-family: 'PT Sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -68,7 +68,7 @@ body {
 }
 
 h1 {
-  color: black;
+  color: white;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 3em;
@@ -80,7 +80,7 @@ h1 {
   border: 0px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  font-family: 'PT+Sans';
+  font-family: 'PT Sans';
   font-size: 1.4em;
   font-weight: bold;
   margin: 0px;
@@ -101,7 +101,7 @@ h1 {
   height: 15px;
   background-color: red;
   box-shadow: 10px solid #fff;
-  padding: 20px;
+padding:10px 0px 10px 0px;
   overflow-x: none;
 }
 
